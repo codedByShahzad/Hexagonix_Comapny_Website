@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -76,34 +77,36 @@ const TeamSection: React.FC = () => {
       : (normalizedIndex + centerOffset) % testimonials.length;
 
   return (
-    <section className=" bg-white flex flex-col items-center justify-center  px-4 sm:px-6 lg:px-12 py-12  lg:py-28 lg:pb-52 relative ">
+    <section className="bg-white flex flex-col items-center justify-center px-4 sm:px-6 lg:px-12 py-12 lg:py-28 lg:pb-52 relative overflow-hidden">
       {/* Header */}
       <motion.div
-        initial={{ opacity: 0, y: -40 }}
+        initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-center flex flex-col justify-center items-center "
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7 }}
+        className="text-center flex flex-col justify-center items-center"
       >
         <motion.hr
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-16 border-2 h-2 bg-gradient-to-tr from-[#57007B] to-[#F76680] mb-4 sm:mb-6 origin-center"
         />
         <h1 className="text-2xl sm:text-3xl md:text-4xl text-gray-900 leading-snug">
           Why customers love <br />
-          <span className="font-bold">working with us</span>
+          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#57007B] to-[#F76680]">
+            working with us
+          </span>
         </h1>
       </motion.div>
 
       {/* Quote */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true, amount: 0.35 }}
+        transition={{ duration: 0.7, delay: 0.15 }}
         className="relative flex items-center justify-center max-w-full sm:max-w-3xl mx-auto mt-12 sm:mt-20 text-center px-4"
       >
         <Image
@@ -113,8 +116,8 @@ const TeamSection: React.FC = () => {
         />
         <p className="text-gray-600 text-sm md:text-lg leading-6 sm:leading-7 md:leading-9 max-w-full sm:max-w-xl mx-auto">
           Without any doubt I recommend Alcaline Solutions as one of the best web
-          design and digital marketing agencies. One of the best agencies I’ve
-          came across so far. Wouldn’t be hesitated to introduce their work to
+          design and digital marketing agencies. One of the best agencies I've
+          come across so far. Wouldn't hesitate to introduce their work to
           someone else.
         </p>
         <Image
@@ -124,12 +127,12 @@ const TeamSection: React.FC = () => {
         />
       </motion.div>
 
-      {/* Carousel */}
+      {/* Carousel wrapper (fade-in when in view) */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.5 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.7, delay: 0.25 }}
         className="w-full max-w-full sm:max-w-6xl mt-8 sm:mt-12 relative"
       >
         <Carousel
@@ -146,19 +149,15 @@ const TeamSection: React.FC = () => {
           afterChange={handleAfterChange}
         >
           {testimonials.map((item, index) => {
-            const isActive =
-              itemsPerView === 1 ? true : index === centerIndex;
+            const isActive = itemsPerView === 1 ? true : index === centerIndex;
 
             return (
-              <motion.div
+              <div
                 key={item.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-                className={`flex flex-col items-center p-2 sm:p-4 w-full transition-all duration-500 ${
-                  isActive ? "scale-105 sm:scale-110" : "scale-90 opacity-60"
+                className={`flex flex-col items-center p-2 sm:p-4 w-full transition-all duration-500 transform ${
+                  isActive ? "scale-105 sm:scale-110 opacity-100" : "scale-90 opacity-60"
                 }`}
+                aria-hidden={!isActive}
               >
                 {/* Avatar */}
                 <div
@@ -209,7 +208,7 @@ const TeamSection: React.FC = () => {
                 >
                   {item.title}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
         </Carousel>

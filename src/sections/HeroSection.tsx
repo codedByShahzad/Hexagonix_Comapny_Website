@@ -17,8 +17,8 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden xl:px-24">
-      <div className="h-[92vh] flex flex-col-reverse md:flex-row justify-center md:justify-between items-center mx-auto px-4 md:px-8 py-10 md:py-0 gap-10">
+    <section className="relative bg-[#F8F7FC] overflow-hidden xl:px-24 ">
+      <div className="h-[92vh]  flex flex-col-reverse md:flex-row justify-center md:justify-between items-center  py-10 md:py-0 gap-10">
         
         {/* Left Content */}
         <div className="flex flex-col gap-6 md:gap-12 text-center md:text-left">

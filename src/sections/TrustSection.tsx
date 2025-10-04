@@ -1,15 +1,19 @@
 "use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import Sphere1 from "@/components/Sphere1";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-
-// 🟢 Don’t import ScrollTrigger at the top (causes SSR issue)
 
 const TrustSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isClient, setIsClient] = useState(false); // ✅ Ensure client-side rendering
+
+  // ✅ Ensure this component only runs animations client-side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const togglePlayback = async () => {
     const v = videoRef.current;
@@ -42,9 +46,11 @@ const TrustSection: React.FC = () => {
     };
   }, []);
 
-  // ✨ GSAP animations with ScrollTrigger
-  useGSAP(() => {
-    (async () => {
+  // ✅ Run GSAP animation only on client
+  useEffect(() => {
+    if (!isClient) return;
+
+    const initAnimation = async () => {
       const { ScrollTrigger } = await import("gsap/ScrollTrigger");
       gsap.registerPlugin(ScrollTrigger);
 
@@ -53,9 +59,9 @@ const TrustSection: React.FC = () => {
           defaults: { ease: "power3.out" },
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 80%", // start animation when section hits 80% viewport
-            toggleActions: "play none none none", // play once, don’t reverse
-            once: true, // ensure it only runs the first time
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
           },
         });
 
@@ -92,8 +98,14 @@ const TrustSection: React.FC = () => {
       }, sectionRef);
 
       return () => ctx.revert();
-    })();
-  }, []);
+    };
+
+    initAnimation();
+
+  }, [isClient]);
+
+  // ✅ Avoid SSR mismatch by waiting for client-side rendering
+  if (!isClient) return null;
 
   return (
     <section
