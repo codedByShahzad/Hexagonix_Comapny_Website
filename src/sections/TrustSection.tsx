@@ -127,7 +127,7 @@ const TrustSection: React.FC = () => {
           project.
         </p>
         <a
-          href="#"
+          href="/services"
           className="trust-link text-[#57007B] font-semibold hover:underline inline-flex items-center text-sm sm:text-base"
         >
           See more Informations{" "}

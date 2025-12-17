@@ -15,11 +15,11 @@ const Carousel = dynamic(() => import("react-multi-carousel"), { ssr: false });
 import "react-multi-carousel/lib/styles.css";
 
 const testimonials = [
-  { id: 1, name: "Romeena De Silva", title: "Janet Cosmetics", img: user1 },
-  { id: 2, name: "John Smith", title: "Tech Lead", img: user1 },
-  { id: 3, name: "Imran Khan", title: "Software Engineer", img: user1 },
-  { id: 4, name: "Ayesha Khan", title: "UI/UX Designer", img: user1 },
-  { id: 5, name: "Mark Wilson", title: "CTO", img: user1 },
+  { id: 1, name: "Abdul Mateen", title: "App Developer", img: user1 },
+  { id: 2, name: "Shahzad Sohail", title: "Full Stack Developer", img: user1 },
+  { id: 3, name: "Tahir Mehmood", title: "App Developer", img: user1 },
+  { id: 4, name: "Shahzaib", title: "UI/UX Designer", img: user1 },
+  { id: 5, name: "Naqash Sohail", title: "Frontend Developer", img: user1 },
 ];
 
 const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => (
@@ -115,10 +115,7 @@ const TeamSection: React.FC = () => {
           className="absolute left-0 sm:-left-10 top-0 w-2 h-4 md:h-7 md:w-4"
         />
         <p className="text-gray-600 text-sm md:text-lg leading-6 sm:leading-7 md:leading-9 max-w-full sm:max-w-xl mx-auto">
-          Without any doubt I recommend Alcaline Solutions as one of the best web
-          design and digital marketing agencies. One of the best agencies I've
-          come across so far. Wouldn't hesitate to introduce their work to
-          someone else.
+         At Hexagonix, our team is a group of passionate developers, designers, and strategists dedicated to building impactful digital solutions. We believe in collaboration, innovation, and attention to detail in every project we take on.
         </p>
         <Image
           src={rightComma}

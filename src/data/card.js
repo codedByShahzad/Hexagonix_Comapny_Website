@@ -17,31 +17,31 @@ export const cards = [
   {
     id: 1,
     title: "Web Design & Development",
-    description: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+    description: "We build fast, responsive, and scalable websites tailored to your business needs.Our solutions focus on performance, security, and modern web standards. From landing pages to complex platforms, we deliver reliable results.",
     img: card_img_1
   },
   {
     id: 2,
     title: "Mobile App Development",
-    description: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+    description: "We create high-quality mobile applications for Android and iOS platforms. Our apps are optimized for speed, usability, and seamless user experience. From idea to launch, we turn concepts into powerful mobile solutions.",
     img: card_img_3
   },
   {
     id: 3,
     title: "Software Testing Service",
-    description: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+    description: "We ensure your software is reliable, secure, and bug-free. Our testing process identifies issues before they impact users. Quality assurance is at the core of everything we deliver.",
     img: card_img_2
   },
   {
     id: 4,
-    title: "Mobile App Development",
-    description: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+    title: "UI/UX Design",
+    description: "We design intuitive and visually appealing user interfaces. Our approach prioritizes user experience and clean design systems. Every design is crafted to engage users and drive conversions.",
     img: card_img_3
   },
   {
     id: 5,
-    title: "Software Testing Service",
-    description: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+    title: "Digital Marketing & Branding",
+    description: "We help businesses grow through strategic digital marketing solutions. From brand identity to online visibility, we strengthen your presence. Our data-driven strategies deliver measurable and lasting results.",
     img: card_img_2
   },
   
