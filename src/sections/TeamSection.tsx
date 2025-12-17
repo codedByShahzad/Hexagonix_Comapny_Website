@@ -9,17 +9,23 @@ import { FaStar } from "react-icons/fa";
 
 import leftComma from "../assets/leftComma.png";
 import rightComma from "../assets/rightComma.png";
-import user1 from "../assets/member1.jpg";
+import user1 from "../assets/tahir.jpg";
+import user2 from "../assets/shehzad.jpeg"
+import user3 from "../assets/wajid.png"
+import user4 from "../assets/member1.jpg"
+import user5 from "../assets/mateen.jpeg"
+import user6 from "../assets/haris.jpeg"
 
 const Carousel = dynamic(() => import("react-multi-carousel"), { ssr: false });
 import "react-multi-carousel/lib/styles.css";
 
 const testimonials = [
-  { id: 1, name: "Abdul Mateen", title: "App Developer", img: user1 },
-  { id: 2, name: "Shahzad Sohail", title: "Full Stack Developer", img: user1 },
-  { id: 3, name: "Tahir Mehmood", title: "App Developer", img: user1 },
-  { id: 4, name: "Shahzaib", title: "UI/UX Designer", img: user1 },
-  { id: 5, name: "Naqash Sohail", title: "Frontend Developer", img: user1 },
+  { id: 1, name: "Abdul Mateen", title: "Project Manager", img: user5 },
+  { id: 2, name: "Shahzad Sohail", title: "Full Stack Developer", img: user2 },
+  { id: 3, name: "Tahir Mehmood", title: "Product Manager", img: user1 },
+  { id: 4, name: "Wajid", title: "UI/UX Designer", img: user3 },
+  { id: 5, name: "Naqash Sohail", title: "Frontend Engenieer", img: user4 },
+  { id: 5, name: "Haris", title: "Frontend Engenier", img: user6 },
 ];
 
 const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => (

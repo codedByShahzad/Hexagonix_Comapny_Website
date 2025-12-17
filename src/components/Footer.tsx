@@ -23,9 +23,8 @@ const Footer = () => {
   const footerLinks = [
     { label: "About Us", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Case Studies", href: "/case-studies" },
+    { label: "Case Studies", href: "/casestudies" },
     { label: "Careers", href: "/hire" },
-    { label: "Areas We Serve", href: "/areas" },
   ];
 
   return (
@@ -94,7 +93,7 @@ const Footer = () => {
       <p className="text-center py-8 text-[#4A5568] text-sm">
         © {year ?? ""} Copyright by{" "}
         <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#57007B] to-[#F76680]">
-          IK Developers
+          Hexagonix
         </span>
         . All rights reserved.
       </p>

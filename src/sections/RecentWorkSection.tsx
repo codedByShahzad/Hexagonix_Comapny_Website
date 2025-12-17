@@ -24,7 +24,7 @@ const RecentWorkSection = () => {
   return (
     <section
       id="recent-case-studies"
-      className="relative bg-[#F7F7FA] flex flex-col items-center justify-center px-4 md:px-10 lg:px-24 py-12 sm:py-20 lg:py-28"
+      className="relative bg-[#F7F7FA] flex flex-col items-center justify-center px-4 md:px-10 lg:px-24 py-12 sm:py-20 lg:py-28 overflow-x-hidden"
     >
       {/* Left Pointer */}
       <Image
