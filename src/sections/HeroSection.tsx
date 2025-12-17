@@ -5,8 +5,10 @@ import hero_main from "../assets/hero_main.png";
 import Sphere2 from "@/components/Sphere2";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Link from "next/link";
 
 const HeroSection = () => {
+  
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
@@ -38,10 +40,11 @@ const HeroSection = () => {
             We help build and manage a team of world-class developers
             to bring your vision to life
           </p>
-
+          <Link href="/contact" >
           <button className="hero-btn px-6 sm:px-8 py-3 sm:py-4 text-white bg-[#3D63EA] rounded-lg w-fit mx-auto md:mx-0">
             {`Let's get started!`}
           </button>
+          </Link>
         </div>
 
         {/* RIGHT IMAGE */}

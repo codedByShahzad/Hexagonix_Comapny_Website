@@ -19,8 +19,8 @@ const HomePage = () => {
       <ServicesSection />
       <MeetingSection />
       <TeamSection />
-      <RecentWorkSection />
-      <WayOfBuildingSection />
+      <RecentWorkSection /> // Fix 
+      <WayOfBuildingSection /> // Fix 
       <DevelopmentApproachSection />
       <OurTechStackSection />
       <TimelinePage />
