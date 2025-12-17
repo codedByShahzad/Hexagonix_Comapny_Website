@@ -29,7 +29,7 @@ const HeroSection = () => {
             <span className="bg-gradient-to-b from-[#DE4396] to-[#0D1C9F]/40 bg-clip-text text-transparent font-bold">
               Product
             </span>{" "}
-            is 
+            is {" "}
             <strong>built by great</strong>{" "}
             <span className="bg-gradient-to-tr from-[#406AFF]/90 to-[#F7666F] bg-clip-text text-transparent font-extrabold">
               teams

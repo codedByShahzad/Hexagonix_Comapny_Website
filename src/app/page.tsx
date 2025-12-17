@@ -8,7 +8,6 @@ import DevelopmentApproachSection from '@/sections/DevelopmentApproachSection'
 import RecentWorkSection from '@/sections/RecentWorkSection'
 import TimelinePage from '@/sections/TimelinePage'
 import OurTechStackSection from '@/sections/OutTechStackSection'
-import FeaturedResources from '@/sections/FeaturedResources'
 import HireBanner from '@/components/HireBanner'
 
 const HomePage = () => {
@@ -19,12 +18,11 @@ const HomePage = () => {
       <ServicesSection />
       <MeetingSection />
       <TeamSection />
-      <RecentWorkSection /> // Fix 
-      <WayOfBuildingSection /> // Fix 
+      <RecentWorkSection /> 
+      <WayOfBuildingSection /> 
       <DevelopmentApproachSection />
       <OurTechStackSection />
       <TimelinePage />
-      <FeaturedResources />
       <HireBanner />
     </div>
   )

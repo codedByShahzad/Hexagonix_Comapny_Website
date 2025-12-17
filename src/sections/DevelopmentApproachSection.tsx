@@ -14,7 +14,6 @@ const DevelopmentApproachSection = () => {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true, margin: "-100px" });
 
-  // ✅ ensures client-only rendering
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
@@ -22,43 +21,43 @@ const DevelopmentApproachSection = () => {
     {
       id: 1,
       icon: da_1,
-      title: "UX Driven Engineering",
-      desc: `Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.`,
+      title: "User-Centered Development",
+      desc: "At Hexagonix, every solution starts with the user. We design and develop software that delivers intuitive experiences and real business value.",
       color: "from-[#27272E] to-[#29272E] text-[#27272E]",
     },
     {
       id: 2,
       icon: da_2,
-      title: "Developing Shared Understanding",
-      desc: `Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.`,
+      title: "Collaborative Planning",
+      desc: "We work closely with clients to build a shared understanding of goals, requirements, and challenges, ensuring clarity at every stage.",
       color: "from-[#509CF5] to-[#68DBF2] text-[#68DBF2]",
     },
     {
       id: 3,
       icon: da_3,
-      title: "Proven Experience and Expertise",
-      desc: `Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.`,
+      title: "Proven Technical Expertise",
+      desc: "Our experienced team delivers scalable and reliable solutions using modern technologies and industry best practices.",
       color: "from-[#FF3D9A] to-[#FF92AE] text-[#FF3D9A]",
     },
     {
       id: 4,
       icon: da_4,
-      title: "Security & Intellectual Property (IP)",
-      desc: `Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.`,
+      title: "Security & IP Protection",
+      desc: "We follow strict security standards to protect your data, codebase, and intellectual property throughout the development lifecycle.",
       color: "from-[#24E795] to-[#67E9F1] text-[#67E9F1]",
     },
     {
       id: 5,
       icon: da_5,
-      title: "Code Reviews",
-      desc: `Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.`,
+      title: "Code Quality & Reviews",
+      desc: "Our structured code reviews ensure clean, maintainable, and high-performance code that meets long-term scalability goals.",
       color: "from-[#F7936F] to-[#FFEF5E] text-[#FFEF5E]",
     },
     {
       id: 6,
       icon: da_6,
       title: "Quality Assurance & Testing",
-      desc: `Unlike other companies, we are a UX first development company. Projects are driven by designers and they make sure design and experiences translate to code.`,
+      desc: "We rigorously test every product to ensure stability, performance, and a bug-free experience before launch.",
       color: "from-[#57007B] to-[#F76680] text-[#F76680]",
     },
   ];
@@ -109,9 +108,7 @@ const AnimatedCard = ({ card, index, mounted }: any) => {
       className="flex flex-col xl:flex-row justify-center gap-6 px-8 py-20 bg-[#FAFAFA] border-[1.8px] border-[#E7DAED] w-full max-w-2xl h-auto"
     >
       <div>
-        <div
-          className={`bg-gradient-to-tr ${card.color} p-3 rounded-xl w-fit`}
-        >
+        <div className={`bg-gradient-to-tr ${card.color} p-3 rounded-xl w-fit`}>
           <Image src={card.icon} alt={card.title} className="w-[40px]" />
         </div>
       </div>
