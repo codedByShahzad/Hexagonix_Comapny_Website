@@ -13,6 +13,8 @@ import meet_carousel_8 from "../assets/meet_carousel_8.png"
 import meet_carousel_9 from "../assets/meet_carousel_9.png"
 import meet_carousel_10 from "../assets/meet_carousel_10.png"
 
+
+
 export const cards = [
   {
     id: 1,
@@ -90,3 +92,5 @@ export const meetCarousel = [
     img: meet_carousel_10
   },
 ]
+
+

@@ -10,7 +10,7 @@ import { FaStar } from "react-icons/fa";
 import leftComma from "../assets/leftComma.png";
 import rightComma from "../assets/rightComma.png";
 import user1 from "../assets/tahir.jpg";
-import user2 from "../assets/shehzad.jpeg"
+import user2 from "../assets/shahzad.jpeg"
 import user3 from "../assets/wajid.png"
 import user4 from "../assets/member1.jpg"
 import user5 from "../assets/mateen.jpeg"

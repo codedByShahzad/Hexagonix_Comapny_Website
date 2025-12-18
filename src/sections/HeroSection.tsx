@@ -20,7 +20,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-[#F8F7FC] overflow-hidden md:px-10 xl:px-24">
-      <div className="min-h-[85vh] flex flex-col-reverse md:flex-row justify-center md:justify-between items-center py-10 md:py-0 ">
+      <div className="min-h-[90vh] flex flex-col-reverse md:flex-row justify-center md:justify-between items-center py-10 md:py-0 ">
 
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-6 md:gap-12 text-center md:text-left px-4 sm:px-8 md:px-0">
