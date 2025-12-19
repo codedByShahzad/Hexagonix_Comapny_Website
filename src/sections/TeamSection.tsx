@@ -25,7 +25,7 @@ const testimonials = [
   { id: 3, name: "Tahir Mehmood", title: "Product Manager", img: user1 },
   { id: 4, name: "Wajid", title: "UI/UX Designer", img: user3 },
   { id: 5, name: "Naqash Sohail", title: "Frontend Engenieer", img: user4 },
-  { id: 5, name: "Haris", title: "Social Media Manager ", img: user6 },
+  { id: 5, name: "Haris Mehmood", title: "Social Media Manager ", img: user6 },
 ];
 
 const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => (
